@@ -18,6 +18,8 @@ sktime = "^0.29.0"
 stonesoup = "^1.2"
 statsmodels = "^0.14.2"
 mapie = "^0.8.3"
+pyesmda = "^0.4.3"
+iterative-ensemble-smoother = "^0.2.6"
 
 
 [tool.poetry.group.dev.dependencies]

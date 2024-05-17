@@ -946,6 +946,25 @@ files = [
 arrow = ">=0.15.0"
 
 [[package]]
+name = "iterative-ensemble-smoother"
+version = "0.2.6"
+description = "A library for the iterative ensemble smoother algorithm."
+optional = false
+python-versions = "*"
+files = [
+    {file = "iterative_ensemble_smoother-0.2.6-py3-none-any.whl", hash = "sha256:497124d94131caeb7d8c63a47f64b32675079e8d44bc3543167eec80ab9b5e7b"},
+    {file = "iterative_ensemble_smoother-0.2.6.tar.gz", hash = "sha256:8a696902b3047be9c30b0029d68f6607837a520e6003fb864bde5a68768566fe"},
+]
+
+[package.dependencies]
+numpy = "*"
+scipy = "*"
+
+[package.extras]
+dev = ["matplotlib", "mypy", "p-tqdm", "pandas", "pre-commit", "pylint", "pytest", "pytest-memray", "pytest-snapshot", "scipy", "tox"]
+doc = ["docutils (<0.21)", "ipykernel", "ipywidgets", "jinja2", "jupyter-sphinx", "jupytext", "lxml-html-clean", "m2r2", "matplotlib", "myst-nb", "numpydoc", "p-tqdm", "pandas", "pydata-sphinx-theme", "pygments", "scipy", "sphinx", "sphinxcontrib.bibtex"]
+
+[[package]]
 name = "jedi"
 version = "0.19.1"
 description = "An autocompletion tool for Python that can be used for text editors."
@@ -2152,6 +2171,21 @@ files = [
     {file = "pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"},
     {file = "pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"},
 ]
+
+[[package]]
+name = "pyesmda"
+version = "0.4.3"
+description = "Python Ensemble Smoother with Multiple Data Assimilation."
+optional = false
+python-versions = "<4,>=3.7"
+files = [
+    {file = "pyesmda-0.4.3-py2.py3-none-any.whl", hash = "sha256:df390523b12479b772341824454da79c2614cd6ce74a9a843e442369b7f107d4"},
+    {file = "pyesmda-0.4.3.tar.gz", hash = "sha256:fc4cb23b78ed9e2c71ad7937621a4464c10775d11d0abae9636799972212cd07"},
+]
+
+[package.dependencies]
+importlib-metadata = "*"
+numpy = "*"
 
 [[package]]
 name = "pygments"
@@ -3390,4 +3424,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.13"
-content-hash = "690915586fcbe12c4fe8d19f78903d2e08dceaf550e6eef69e545137af137241"
+content-hash = "47203a3d754dedd1874c04b0d690a7bc329621464959cc087f0e6963f0e7c890"
