@@ -6,13 +6,18 @@ authors = ["James Bristow <jbris@noreply>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.13"
 pcse = "^5.5.6"
 pandas = "^2.2.2"
 pyyaml = "^6.0.1"
 sqlalchemy = "<2.0"
 numpy = "^1.26.4"
 matplotlib = "^3.9.0"
+river = "^0.21.1"
+sktime = "^0.29.0"
+stonesoup = "^1.2"
+statsmodels = "^0.14.2"
+mapie = "^0.8.3"
 
 
 [tool.poetry.group.dev.dependencies]
