@@ -6,7 +6,7 @@ authors = ["James Bristow <jbris@noreply>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = ">=3.9,<3.12"
 pcse = "^5.5.6"
 pandas = "^2.2.2"
 pyyaml = "^6.0.1"
@@ -20,6 +20,13 @@ statsmodels = "^0.14.2"
 mapie = "^0.8.3"
 pyesmda = "^0.4.3"
 iterative-ensemble-smoother = "^0.2.6"
+goppy = "^1.1.1"
+sysidentpy = "<0.3.4"
+pykalman = "^0.9.7"
+numba = "^0.59.1"
+dapy = {git = "https://github.com/thiery-lab/data-assimilation.git"}
+pyedm = "^2.0.1"
+pypfilt = {extras = ["plot"], version = "^0.8.3"}
 
 
 [tool.poetry.group.dev.dependencies]

@@ -1,0 +1,38 @@
+# NOTE: Save this file as 'lorenz63_simulate.toml'
+
+[components]
+model = "pypfilt.examples.lorenz.Lorenz63"
+time = "pypfilt.Scalar"
+sampler = "pypfilt.sampler.LatinHypercube"
+summary = "pypfilt.summary.HDF5"
+
+[time]
+start = 0.0
+until = 25.0
+steps_per_unit = 10
+summaries_per_unit = 10
+
+[prior]
+sigma = { name = "constant", args.value = 10 }
+rho = { name = "constant", args.value = 28 }
+beta = { name = "constant", args.value = 2.66667 }
+x = { name = "constant", args.value = 1 }
+y = { name = "constant", args.value = 1 }
+z = { name = "constant", args.value = 1 }
+
+[observations.x]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+
+[observations.y]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+
+[observations.z]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+
+[filter]
+particles = 500
+prng_seed = 2001
+history_window = -1
+resample.threshold = 0.25
+
+[scenario.simulate]

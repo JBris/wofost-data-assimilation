@@ -1,0 +1,45 @@
+[components]
+model = "pypfilt.examples.lorenz.Lorenz63"
+time = "pypfilt.Scalar"
+sampler = "pypfilt.sampler.LatinHypercube"
+summary = "pypfilt.summary.HDF5"
+
+[time]
+start = 0.0
+until = 25.0
+steps_per_unit = 10
+summaries_per_unit = 10
+
+[prior]
+sigma = { name = "constant", args.value = 10 }
+rho = { name = "constant", args.value = 28 }
+beta = { name = "constant", args.value = 2.66667 }
+x = { name = "uniform", args.loc = -5, args.scale = 10 }
+y = { name = "uniform", args.loc = -5, args.scale = 10 }
+z = { name = "uniform", args.loc = -5, args.scale = 10 }
+
+[observations.x]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+file = "lorenz63-x.ssv"
+
+[observations.y]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+file = "lorenz63-y.ssv"
+
+[observations.z]
+model = "pypfilt.examples.lorenz.ObsLorenz63"
+file = "lorenz63-z.ssv"
+
+[summary.tables]
+forecasts.component = "pypfilt.summary.PredictiveCIs"
+forecasts.credible_intervals = [50, 60, 70, 80, 90, 95]
+sim_z.component = "pypfilt.summary.SimulatedObs"
+sim_z.observation_unit = "z"
+
+[filter]
+particles = 500
+prng_seed = 2001
+history_window = -1
+resample.threshold = 0.25
+
+[scenario.forecast]
