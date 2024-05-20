@@ -1,0 +1,41 @@
+[components]
+model = "model.GaussianWalk"
+time = "pypfilt.Scalar"
+sampler = "pypfilt.sampler.LatinHypercube"
+summary = "pypfilt.summary.HDF5"
+
+[time]
+start = 0.0
+until = 30
+steps_per_unit = 1
+summaries_per_unit = 1
+
+[prior]
+x = { name = "uniform", args.loc = 0, args.scale = 1 }
+
+[observations.x]
+model = "model.GaussianObs"
+parameters.sdev = 0.01
+
+[filter]
+particles = 500
+prng_seed = 2001
+history_window = -1
+resample.threshold = 0.25
+
+[summary.tables]
+forecasts.component = "pypfilt.summary.PredictiveCIs"
+forecasts.credible_intervals = [95]
+regularisation.enabled = true
+
+[filter.regularisation.bounds]
+x = { min = -50, max = 50 }
+
+[scenario.forecast.files]
+cache_file = "cache_forecast.hdf5"
+
+[scenario.forecast_regularised.files]
+cache_file = "cache_forecast_regularised.hdf5"
+
+[scenario.simulate]
+[scenario.forecast_regularised]

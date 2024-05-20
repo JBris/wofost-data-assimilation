@@ -21,6 +21,8 @@ z = { name = "uniform", args.loc = -5, args.scale = 10 }
 [observations.x]
 model = "pypfilt.examples.lorenz.ObsLorenz63"
 file = "lorenz63-x.ssv"
+parameters.sdev = 0.2
+parameterz.sdev = 0.3
 
 [observations.y]
 model = "pypfilt.examples.lorenz.ObsLorenz63"

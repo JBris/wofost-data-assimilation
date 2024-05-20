@@ -494,26 +494,6 @@ docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
 tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
-name = "dapy"
-version = "0.1.0"
-description = "Data assimilation in Python"
-optional = false
-python-versions = ">=3.8"
-files = []
-develop = false
-
-[package.dependencies]
-numba = ">=0.48"
-numpy = ">=1.21"
-scipy = ">=1.8"
-
-[package.source]
-type = "git"
-url = "https://github.com/thiery-lab/data-assimilation.git"
-reference = "HEAD"
-resolved_reference = "8a05070f5c472bd746442ccb26f947fb1a5d3052"
-
-[[package]]
 name = "debugpy"
 version = "1.8.1"
 description = "An implementation of the Debug Adapter Protocol for Python"
@@ -3665,4 +3645,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9,<3.12"
-content-hash = "cf98852f6440a1dd70b26ab2993a6678c62d4a8926527bfe4c01a33a106e75bc"
+content-hash = "cf406d1548eed47701543700da7fefca2be984500ec472c620f4fefd40ffceec"
