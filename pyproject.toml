@@ -26,6 +26,7 @@ pykalman = "^0.9.7"
 numba = "^0.59.1"
 pyedm = "^2.0.1"
 pypfilt = {extras = ["plot"], version = "^0.8.3"}
+u8darts = {extras = ["notorch"], version = "^0.29.0"}
 
 
 [tool.poetry.group.dev.dependencies]
